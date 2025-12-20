@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+/* Print styles for recipe cards */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+  }
+  
+  .print-recipe {
+    page-break-inside: avoid;
+  }
+  
+  .print-recipe h1 {
+    font-size: 24pt;
+    margin-bottom: 12pt;
+  }
+  
+  .print-recipe h2 {
+    font-size: 18pt;
+    margin-top: 12pt;
+    margin-bottom: 8pt;
+  }
+  
+  .print-recipe p, .print-recipe li {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+}
